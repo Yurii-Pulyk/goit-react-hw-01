@@ -1,10 +1,9 @@
-import React from 'react';
 import Profile from './components/Profile/Profile.jsx';
 import userData from './userData.json';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Profile
         name={userData.username}
         tag={userData.tag}
@@ -12,7 +11,7 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
-    </div>
+    </>
   );
 };
 
