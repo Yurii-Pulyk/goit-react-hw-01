@@ -1,15 +1,16 @@
-import React from 'react';
 import FriendListItem from './FriendListItem';
 
 const FriendList = ({ friends }) => {
   return (
     <ul>
-      {/* Кількість li залежить від кількості об'єктів в масиві */}
-      <li>
-        <FriendListItem />
-      </li>
+      {friends.map(friend => (
+        <li key={friend.id}>
+          <FriendListItem friend={friend} />
+        </li>
+      ))}
+      ;
     </ul>
   );
 };
 
-export default FriendsList;
+export default FriendList;
